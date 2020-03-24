@@ -18,7 +18,8 @@ def play(songs)
   input = gets.strip
   innum = input.to_i
   if innum == 0 
-    if songs.find {|x| x == input}
+    founds = songs.find {|x| x == input}
+    if founds
       puts "Playing #{founds}"
     else
       puts "Invalid input, please try again"
